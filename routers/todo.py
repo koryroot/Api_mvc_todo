@@ -18,4 +18,9 @@ def todo_list():
 
 @router.post('/cosas/create')
 def cosas_create():
-    pass
+    if name:
+        tname = dbdata.Todo.names #se agrega una cosa
+        return ServerResult(response=tname.data(), message ="cosa agregada")
+    else:
+        return ServerResult(ok = False, message = "Ocurrio algo no se agrego nada")
+
