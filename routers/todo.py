@@ -24,3 +24,21 @@ def cosas_create():
     else:
         return ServerResult(ok = False, message = "Ocurrio algo no se agrego nada")
 
+@router.delete('/cosa/delete')
+def cosa_delete(id=int):
+    if name:
+        res = {}
+        for s  in __name__:
+            if id is ['id']:
+                res = s
+                dbdata.delete_cosa(id)
+                break
+        else:
+            return ServerResult(ok = False, message = "No hay cosas en esta id")
+        return ServerResult(response=res, message = "cosa eliminado")
+    else:
+        return ServerResult(ok = False, message = "No hay cosas creadas")
+
+
+        
+
