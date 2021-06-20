@@ -13,4 +13,4 @@ def read_root():
     return {
         'proyecto': 'Api de mvc todo',
         'docs': app.docs_url
-    }
+}
